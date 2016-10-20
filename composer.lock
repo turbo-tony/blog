@@ -4,9 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "023b0c86754f6074412264fab973f35c",
-    "content-hash": "15d2a3f81b9deebfe853f7d682ede939",
+    "hash": "d371a25c5291958d12b1d07ee2effe07",
+    "content-hash": "55900fecc45039f5d3475cc33b1b2c82",
     "packages": [
+        {
+            "name": "abplus/core-bundle",
+            "version": "dev-master",
+            "target-dir": "ABPlus/CoreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/turbo-tony/abpluscorebunle.git",
+                "reference": "b7b67c3a6c66d3d93eb93a02e6ee175e365c7479"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/turbo-tony/abpluscorebunle/zipball/b7b67c3a6c66d3d93eb93a02e6ee175e365c7479",
+                "reference": "b7b67c3a6c66d3d93eb93a02e6ee175e365c7479",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "symfony/framework-bundle": ">=3.0.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "ABPlus\\CoreBundle": ""
+                }
+            },
+            "license": [
+                "restricted"
+            ],
+            "authors": [
+                {
+                    "name": "Antoine Bousquet",
+                    "email": "antoine.p.bousquet@gmail.com"
+                }
+            ],
+            "description": "Base bundle used for Symfony AB Plus projects",
+            "keywords": [
+                "abplus core bundle"
+            ],
+            "support": {
+                "source": "https://github.com/turbo-tony/abpluscorebunle/tree/master",
+                "issues": "https://github.com/turbo-tony/abpluscorebunle/issues"
+            },
+            "time": "2016-10-20 18:08:33"
+        },
         {
             "name": "cocur/slugify",
             "version": "v2.3",
@@ -2819,7 +2863,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "abplus/core-bundle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

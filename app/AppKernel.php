@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             // Custom bundles
+            new ABPlus\CoreBundle\ABPlusCoreBundle(),
             // App-specific bundles
             new AppBundle\AppBundle(),
         ];
