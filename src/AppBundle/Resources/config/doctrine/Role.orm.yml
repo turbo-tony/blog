@@ -1,0 +1,19 @@
+AppBundle\Entity\Role:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        label:
+            type: string
+            length: 255
+    manyToOne:
+        medium:
+            targetEntity: Medium
+            joinColumn:
+                nullable: false
+    lifecycleCallbacks: {}

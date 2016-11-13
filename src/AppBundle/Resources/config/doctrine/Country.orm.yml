@@ -1,0 +1,29 @@
+AppBundle\Entity\Country:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+        fullName:
+            type: string
+            length: 255
+            nullable: true
+        fullOriginalName:
+            type: string
+            length: 255
+            nullable: true
+        language:
+            type: string
+            length: 15
+    lifecycleCallbacks: {}

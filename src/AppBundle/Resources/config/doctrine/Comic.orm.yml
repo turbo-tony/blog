@@ -1,0 +1,4 @@
+AppBundle\Entity\Comic:
+    type: entity
+    table: null
+    lifecycleCallbacks: {}

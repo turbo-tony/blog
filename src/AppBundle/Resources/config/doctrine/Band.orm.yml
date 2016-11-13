@@ -1,0 +1,36 @@
+AppBundle\Entity\Band:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        creationYear:
+            type: smallint
+            nullable: true
+        disbandYear:
+            type: smallint
+            nullable: true
+        language:
+            type: string
+            length: 15
+    oneToMany:
+        authors:
+            targetEntity: BandAuthorRole
+            mappedBy: band
+            cacade: all
+    manyToMany:
+        genres:
+            targetEntity: Genre
+    manyToOne:
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    lifecycleCallbacks: {}

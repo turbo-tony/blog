@@ -1,0 +1,33 @@
+AppBundle\Entity\Universe:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+        language:
+            type: string
+            length: 15
+    oneToMany:
+        authors:
+            targetEntity: UniverseAuthorRole
+            mappedBy: universe
+    manyToOne:
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    manyToMany:
+        genres:
+            targetEntity: Genre
+    lifecycleCallbacks: {}

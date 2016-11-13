@@ -1,0 +1,39 @@
+AppBundle\Entity\Company:
+    type: entity
+    table: null
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: is_editor
+        type: integer
+    discriminatorMap:
+        1: Editor
+        0: Company
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+        creationYear:
+            type: smallint
+            nullable: true
+        closingYear:
+            type: smallint
+            nullable: true
+    manyToOne:
+        parent:
+            targetEntity: Company
+            inversedBy: children
+            joinColumn:
+                nullable: true
+                name: parent_id
+                referencedColumnName: id
+    lifecycleCallbacks: {}

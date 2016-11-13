@@ -1,0 +1,34 @@
+AppBundle\Entity\Genre:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        label:
+            type: string
+            length: 255
+        description:
+            type: text
+            nullable: true
+    manyToOne:
+        medium:
+            targetEntity: Medium
+            joinColumn:
+                nullable: false
+        parent:
+            targetEntity: Genre
+            inversedBy: children
+            fetch: LAZY
+            joinColumn:
+                nullable: true
+                name: parent_id
+                referencedColumnName: id
+    oneToMany:
+        children:
+            targetEntity: Genre
+            mappedBy: parent
+    lifecycleCallbacks: {}

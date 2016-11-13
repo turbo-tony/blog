@@ -1,0 +1,11 @@
+AppBundle\Entity\Book:
+    type: entity
+    table: null
+    fields:
+        pageCount:
+            type: smallint
+        tome:
+            type: string
+            length: 127
+            nullable: true
+    lifecycleCallbacks: {}

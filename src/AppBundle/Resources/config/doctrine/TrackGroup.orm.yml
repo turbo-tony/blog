@@ -1,0 +1,25 @@
+AppBundle\Entity\TrackGroup:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        order:
+            type: smallint
+    oneToMany:
+        tracks:
+            targetEntity: Track
+            mappedBy: trackGroup
+    manyToOne:
+        issue:
+            targetEntity: Disc
+            joinColumn:
+                nullable: false
+    lifecycleCallbacks: {}

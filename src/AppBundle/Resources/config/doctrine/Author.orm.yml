@@ -1,0 +1,42 @@
+AppBundle\Entity\Author:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        penName:
+            type: string
+            length: 255
+            nullable: true
+        lastName:
+            type: string
+            length: 255
+            nullable: true
+        firstName:
+            type: string
+            length: 255
+            nullable: true
+        fullName:
+            type: string
+            length: 255
+            nullable: true
+        birthDate:
+            type: date
+            nullable: true
+        deathDate:
+            type: date
+            nullable: true
+    manyToOne:
+        defaultRole:
+            targetEntity: Role
+            joinColumn:
+                nullable: true
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    lifecycleCallbacks: {}

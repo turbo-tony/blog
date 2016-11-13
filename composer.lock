@@ -10,16 +10,15 @@
         {
             "name": "abplus/core-bundle",
             "version": "dev-master",
-            "target-dir": "ABPlus/CoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/turbo-tony/abpluscorebunle.git",
-                "reference": "b7b67c3a6c66d3d93eb93a02e6ee175e365c7479"
+                "reference": "7a1d2c62b3c68ccea3b42d5e5f3d08203aab0d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/turbo-tony/abpluscorebunle/zipball/b7b67c3a6c66d3d93eb93a02e6ee175e365c7479",
-                "reference": "b7b67c3a6c66d3d93eb93a02e6ee175e365c7479",
+                "url": "https://api.github.com/repos/turbo-tony/abpluscorebunle/zipball/7a1d2c62b3c68ccea3b42d5e5f3d08203aab0d75",
+                "reference": "7a1d2c62b3c68ccea3b42d5e5f3d08203aab0d75",
                 "shasum": ""
             },
             "require": {
@@ -28,12 +27,12 @@
             },
             "type": "symfony-bundle",
             "autoload": {
-                "psr-0": {
-                    "ABPlus\\CoreBundle": ""
+                "psr-4": {
+                    "ABPlus\\CoreBundle\\": ""
                 }
             },
             "license": [
-                "restricted"
+                "MIT"
             ],
             "authors": [
                 {
@@ -49,7 +48,7 @@
                 "source": "https://github.com/turbo-tony/abpluscorebunle/tree/master",
                 "issues": "https://github.com/turbo-tony/abpluscorebunle/issues"
             },
-            "time": "2016-10-20 18:08:33"
+            "time": "2016-10-21 15:12:36"
         },
         {
             "name": "cocur/slugify",

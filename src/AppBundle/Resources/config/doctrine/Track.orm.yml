@@ -1,0 +1,23 @@
+AppBundle\Entity\Track:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        order:
+            type: smallint
+        duration:
+            type: integer
+    manyToOne:
+        trackGroup:
+            targetEntity: TrackGroup
+            joinColumn:
+                nullable: false
+    lifecycleCallbacks: {}

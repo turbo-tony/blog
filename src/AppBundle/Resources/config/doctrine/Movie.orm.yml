@@ -1,0 +1,9 @@
+AppBundle\Entity\Movie:
+    type: entity
+    table: null
+    fields:
+        order:
+            type: smallint
+        duration:
+            type: integer
+    lifecycleCallbacks: {}

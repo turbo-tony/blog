@@ -1,0 +1,71 @@
+AppBundle\Entity\Issue:
+    type: entity
+    table: null
+    inheritanceType: SINGLE_TABLE
+    discriminatorColumn:
+        name: issue_type_discr
+        type: string
+        length: 31
+    discriminatorMap:
+        unknown:        Issue
+        book:           Book
+        comic:          Comic
+        movie:          Movie
+        disc:           Disc
+        serial_season:  VideoSeriesSeason
+        serial_episode: VideoSeriesEpisode
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+        releaseDate:
+            type: date
+            nullable: true
+        language:
+            type: string
+            length: 15
+            nullable: true
+    manyToOne:
+        series:
+            targetEntity: Series
+            joinColumn:
+                nullable: true
+        universe:
+            targetEntity: Universe
+            joinColumn:
+                nullable: true
+        editor:
+            targetEntity: Editor
+            joinColumn:
+                nullable: true
+        collection:
+            targetEntity: Collection
+            joinColumn:
+                nullable: true
+        issueType:
+            targetEntity: IssueType
+            joinColumn:
+                nullable: false
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    oneToMany:
+        authors:
+            targetEntity: IssueAuthorRole
+            mappedBy: issue
+    manyToMany:
+        genres:
+            targetEntity: Genre
+            orderBy: { name: ASC }
+    lifecycleCallbacks: {}

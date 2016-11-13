@@ -1,0 +1,23 @@
+AppBundle\Entity\TrackAuthorRole:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        author:
+            targetEntity: Author
+            joinColumn:
+                nullable: false
+        role:
+            targetEntity: Role
+            joinColumn:
+                nullable: true
+        track:
+            targetEntity: Track
+            joinColumn:
+                nullable: false
+    lifecycleCallbacks: {}

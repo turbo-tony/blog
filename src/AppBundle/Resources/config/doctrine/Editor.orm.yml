@@ -1,0 +1,21 @@
+AppBundle\Entity\Editor:
+    type: entity
+    table: null
+    fields:
+        language:
+            type: string
+            length: 15
+            nullable: true
+    manyToOne:
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    manyToMany:
+        issueTypes:
+            targetEntity: IssueType
+            orderBy: { name: "ASC" }
+        genres:
+            targetEntity: Genre
+            orderBy: { name: "ASC" }
+    lifecycleCallbacks: {}

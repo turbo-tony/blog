@@ -1,0 +1,27 @@
+AppBundle\Entity\Collection:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+    manyToOne:
+        editor:
+            targetEntity: Editor
+            joinColumn:
+                nullable: false
+    manyToMany:
+        genres:
+            targetEntity: Genre
+            orderBy: { name: ASC }
+    lifecycleCallbacks: {}

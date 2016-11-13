@@ -1,0 +1,53 @@
+AppBundle\Entity\Series:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        originalName:
+            type: string
+            length: 255
+            nullable: true
+        finished:
+            type: boolean
+        language:
+            type: string
+            length: 15
+            nullable: true
+    manyToOne:
+        universe:
+            targetEntity: Universe
+            joinColumn:
+                nullable: true
+        editor:
+            targetEntity: Editor
+            joinColumn:
+                nullable: true
+        collection:
+            targetEntity: Collection
+            joinColumn:
+                nullable: true
+        issueType:
+            targetEntity: IssueType
+            joinColumn:
+                nullable: false
+        country:
+            targetEntity: Country
+            joinColumn:
+                nullable: true
+    oneToMany:
+        authors:
+            targetEntity: SeriesAuthorRole
+            mappedBy: issue
+    manyToMany:
+        genres:
+            targetEntity: Genre
+            orderBy: { name: ASC }
+    lifecycleCallbacks: {}

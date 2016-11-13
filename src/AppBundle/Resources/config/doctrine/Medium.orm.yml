@@ -1,0 +1,14 @@
+AppBundle\Entity\Medium:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        label:
+            type: string
+            length: 255
+    lifecycleCallbacks: {}

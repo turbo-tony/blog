@@ -1,0 +1,13 @@
+AppBundle\Entity\Disc:
+    type: entity
+    table: null
+    manyToOne:
+        band:
+            targetEntity: Band
+            joinColumn:
+                nullable: true
+    oneToMany:
+        trackGroups:
+            targetEntity: TrackGroup
+            mappedBy: issue
+    lifecycleCallbacks: {}

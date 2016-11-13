@@ -1,0 +1,23 @@
+AppBundle\Entity\UniverseAuthorRole:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        author:
+            targetEntity: Author
+            joinColumn:
+                nullable: false
+        role:
+            targetEntity: Role
+            joinColumn:
+                nullable: true
+        universe:
+            targetEntity: Universe
+            joinColumn:
+                nullable: false
+    lifecycleCallbacks: {}

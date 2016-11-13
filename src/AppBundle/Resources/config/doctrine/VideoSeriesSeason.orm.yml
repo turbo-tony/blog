@@ -1,0 +1,13 @@
+AppBundle\Entity\VideoSeriesSeason:
+    type: entity
+    table: null
+    fields:
+        order:
+            type: smallint
+        count:
+            type: smallint
+    oneToMany:
+        episodes:
+            targetEntity: VideoSeriesEpisode
+            mappedBy: season
+    lifecycleCallbacks: {}
